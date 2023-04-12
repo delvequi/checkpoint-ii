@@ -1,0 +1,654 @@
+@import url(global.css);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+@media (min-width: 320px) {
+  #loginButton:disabled {
+    background-color: var(--greyish-purple);
+    border-color: var(--dark-grey);
+  }
+  body {
+    /* display: flex; */
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--purple);
+  }
+  input.err {
+    border: solid 1px var(--pink-hot);
+    background-color: var(--almost-white);
+  }
+  div.input-group input.success {
+    border: solid 1px var(--blueish);
+    background-color: #fff;
+    color: var(--pink);
+  }
+  h2#logintext {
+    font-size: 3rem;
+    color: var(--mid-pink);
+    margin-bottom: 30px;
+    overflow-y: hidden;
+  }
+  #loginIcon {
+    position: relative;
+    top: 10px;
+    margin-top: 30px;
+    font-weight: 500;
+    width: 32px;
+    height: 32px;
+  }
+  #mainImg {
+    width: 252px;
+    height: auto;
+  }
+  #container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--lighter-blue);
+    width: 100vw;
+    /* height: 100vh; */
+    background-image: url(/assets/benefits-bg.png);
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-position: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #containerform {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90vw;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .loginForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    height: 50vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  input {
+    border: solid 1px var(--blueish);
+    width: 77.938vw;
+    height: 30px;
+    margin-top: 5px;
+    padding: 20px;
+    color: var(--dark-grey);
+    background-color: var(--primary);
+    border-radius: 2em;
+    line-height: 1.4;
+  }
+  div.input-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 78vw;
+    height: 125px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-line-pack: stretch;
+        align-content: stretch;
+  }
+  input::-webkit-input-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input::-moz-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input:-ms-input-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input::-ms-input-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input::placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  div.input-group span {
+    font-size: 0.8rem;
+    color: var(--pink-hot);
+    font-family: "Montserrat";
+    margin-top: 0.5rem;
+  }
+  .error-message {
+    color: var(--pink-hot);
+    line-height: 1.8rem;
+    font-size: 0.9rem;
+  }
+  label {
+    color: var(--mid-blue);
+  }
+  #loginButton {
+    width: 41.563vw;
+    height: 40px;
+    background-color: var(--pink);
+    border: solid 1px var(--pink);
+    border-radius: 2em;
+    color: var(--primary);
+  }
+  a#createAcc {
+    font-size: 0.8rem;
+    color: var(--dark-grey);
+  }
+}
+@media (min-width: 320px) and (min-width: 481px) {
+  input {
+    width: 77.938vw;
+  }
+  #loginButton {
+    width: 27.651vw;
+  }
+}
+@media (min-width: 320px) and (min-width: 481px) and (min-width: 600px) {
+  input {
+    width: 57.938vw;
+  }
+  #loginButton {
+    width: 27.651vw;
+  }
+  #container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--lighter-blue);
+    width: 60vw;
+    /* height: 100vh; */
+    background-image: url(/assets/benefits-bg.png);
+    background-size: 18rem;
+    background-repeat: repeat;
+    background-position: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 18px;
+    background: rgba(240, 249, 250, 0.42);
+    border-radius: 16px;
+    -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.6px);
+    -webkit-backdrop-filter: blur(1.6px);
+    border: 1px solid rgba(240, 249, 250, 0.22);
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+  #containerform {
+    background-image: url(/assets/benefits-bg.png);
+    background-size: 16.2rem;
+    background-repeat: repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60vw;
+    height: 94vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  div.input-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 39vw;
+    height: 125px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-line-pack: stretch;
+    align-content: center;
+  }
+  .loginForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 1rem;
+    width: 42vw;
+    height: 50vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  div#createAcc {
+    margin-top: 1rem;
+  }
+  a#createAcc {
+    margin: 0.6rem 0 0 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+@media (min-width: 320px) and (min-width: 481px) and (min-width: 769px) {
+  #mainImg {
+    width: 227px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  input {
+    border: solid 1px var(--blueish);
+    width: 31.938vw;
+    height: 30px;
+    margin-top: 5px;
+    padding: 20px;
+    color: var(--dark-grey);
+    background-color: var(--primary);
+    border-radius: 2em;
+    line-height: 1.4;
+  }
+  div.input-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 78vw;
+    height: 125px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+  }
+  input::-webkit-input-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input::-moz-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input:-ms-input-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input::-ms-input-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input::placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input.input-error {
+    border: 2px solid var(--pink-hot);
+    background-color: var(--almost-white);
+    caret-color: var(--dark-grey);
+    color: var(--dark-grey);
+  }
+  .error-message {
+    color: var(--pink-hot);
+    line-height: 1.8rem;
+    font-size: 0.8rem;
+  }
+  #loginButton {
+    width: 17.295vw;
+    height: 40px;
+    background-color: var(--pink);
+    border: solid 1px var(--pink);
+    border-radius: 2em;
+    color: var(--primary);
+  }
+  .loginForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 35vw;
+    height: 54vh;
+    /* margin-top: -0.5rem; */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 320px) and (min-width: 481px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: var(--greyish-blue);
+  }
+}
+@media (min-width: 320px) and (min-width: 481px) {
+  #container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--lighter-blue);
+    width: 60vw;
+    /* height: 100vh; */
+    background-image: url(/assets/benefits-bg.png);
+    background-size: 18rem;
+    background-repeat: repeat;
+    background-position: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 18px;
+    background: rgba(240, 249, 250, 0.42);
+    border-radius: 16px;
+    -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.6px);
+    -webkit-backdrop-filter: blur(1.6px);
+    border: 1px solid rgba(240, 249, 250, 0.22);
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+@media (min-width: 320px) and (min-width: 481px) {
+  #containerform {
+    background-image: url(/assets/benefits-bg.png);
+    background-size: 16.2rem;
+    background-repeat: repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60vw;
+    height: 94vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media (min-width: 320px) and (min-width: 1025px) {
+  input {
+    width: 23.707vw;
+  }
+  div.input-group {
+    width: 23vw;
+  }
+  #loginButton {
+    width: 12.976vw;
+    height: 40px;
+    background-color: var(--pink);
+    border: solid 1px var(--pink);
+    border-radius: 2em;
+    color: var(--primary);
+  }
+  #container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--lighter-blue);
+    width: 65vw;
+    /* height: 100vh; */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 18px;
+  }
+  #containerform {
+    background-image: url(/assets/benefits-bg.png);
+    background-size: 16.2rem;
+    background-repeat: repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 65vw;
+    height: 50vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  h2#logintext {
+    font-size: 3rem;
+    color: var(--mid-pink);
+    margin-bottom: 30px;
+    overflow-y: hidden;
+    position: absolute;
+    top: 12%;
+    left: 16%;
+    width: 25%;
+  }
+  #mainImg {
+    width: 252px;
+    height: auto;
+    position: absolute;
+    top: 30%;
+    left: 8%;
+  }
+  .loginForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 44vw;
+    margin-left: 40%;
+    height: 42vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: 48%;
+    margin-top: 4%;
+  }
+  #loginIcon {
+    position: absolute;
+    top: 0%;
+    left: 24%;
+    margin-top: 30px;
+    font-weight: 500;
+    width: 32px;
+    height: 32px;
+  }
+}
+@media (min-width: 320px) and (min-width: 1278px) {
+  #container {
+    width: 60vw;
+  }
+  #containerform {
+    width: 60vw;
+  }
+}
+@media (min-width: 320px) and (min-width: 1420px) {
+  #container {
+    width: 55vw;
+  }
+  #containerform {
+    width: 55vw;
+  }
+  .loginForm {
+    margin-left: 42%;
+  }
+  form.loginForm input {
+    width: 21.707vw;
+  }
+}
+@media (min-width: 320px) and (min-width: 1920px) {
+  div.input-group {
+    width: 14vw;
+  }
+  #container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--lighter-blue);
+    width: 38vw;
+  }
+  #containerform {
+    background-image: url(/assets/benefits-bg.png);
+    background-size: auto;
+    background-repeat: repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 40vw;
+  }
+  form.loginForm input {
+    width: 14.707vw;
+  }
+  .loginForm {
+    margin-left: 37%;
+  }
+  #loginButton {
+    width: 6.976vw;
+  }
+}
+@media (min-width: 320px) and (min-width: 1920px) and (min-width: 2080px) {
+  #container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--lighter-blue);
+    width: 35vw;
+  }
+  #containerform {
+    background-image: url(/assets/benefits-bg.png);
+    background-size: auto;
+    background-repeat: repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 35vw;
+  }
+  .loginForm {
+    margin-left: 43%;
+  }
+}/*# sourceMappingURL=login-style.css.map */

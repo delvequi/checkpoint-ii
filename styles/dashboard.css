@@ -1,0 +1,724 @@
+@import url(global.css);
+@media (min-width: 360px) {
+  #fNameLname {
+    color: var(--primary);
+    font-size: 0.8rem;
+  }
+  button{
+    background-color: transparent;
+  }
+  .reset-all {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    /* height: 100px; */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-line-pack: distribute;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .reset {
+    background-color: var(--mid-pink);
+    border-radius: 80px;
+    height: 3rem;
+    padding: 0.3em 1.5rem;
+    color: var(--primary);
+    font-size: 1rem;
+    margin-bottom: 8rem;
+  }
+  .heart-checkbox {
+    background: url(/assets/wishlist-heart-animation-on-click/smaller.svg) no-repeat; /* CHANGE this to your sprite sheet filename */
+    width: 100px; /* CHANGE this to your document width */
+    height: 100px; /* CHANGE this to your document height */
+    -webkit-appearance: none; /* removes native look of the checkbox for Safari */
+    -moz-appearance: none;
+         appearance: none; /* removes native look of the checkbox */
+    vertical-align: middle;
+    background-position: 0px 0px;
+    -webkit-transition: background-position 1s steps(28);
+    transition: background-position 1s steps(28);
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+  }
+  .heart-checkbox:checked { /* styles the checkbox checked state */
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    background-position: -2800px 0;
+  }
+  body {
+    background-color: var(--purple);
+    overflow-x: hidden;
+  }
+  #supper-wrapper {
+    background-color: var(--lighter-blue);
+    min-height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: url(./assets/benefits-bg.png);
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: flex-start;
+  }
+  /* task list */
+  Todos ul.todos li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 89%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: var(--light-blue);
+    border-radius: 56px;
+    margin: 0.8rem;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  ul.todos li div.for-heart {
+    width: 10%;
+    position: relative;
+    left: 9%;
+    top: 10%;
+  }
+  ul.todos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* BORDERS AND BULLETS */
+  p {
+    /*CSS reset*/
+    margin-bottom: 0;
+  }
+  ul.todos li {
+    position: relative; /* so that pseudoelements are positioned relatively to their "li"s*/
+    /* use padding-bottom instead of margin-bottom.*/
+    margin-bottom: 0; /* This overrides previously specified margin-bottom */
+  }
+  .heart {
+    width: 100px;
+    height: 100px;
+    background: url(/assets/wishlist-heart-animation-on-click/smaller.svg) no-repeat;
+    background-position: 0px 0px;
+    cursor: pointer;
+    -webkit-transition: background-position 1s steps(28);
+    transition: background-position 1s steps(28);
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+  }
+  .heart.is-active {
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+    background-position: -2800px 0;
+  }
+  .stage {
+    /* width: 50px; */
+    height: 10px;
+    position: relative;
+    top: -1.5%;
+    display: inline-block;
+    left: 7.3%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  /* header //////////////// */
+  .supper-wrapper {
+    background-color: var(--lighter-blue);
+    min-height: 200px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: url(./assets/benefits-bg.png);
+  }
+  header nav {
+    width: 100vw;
+    height: 60px;
+    background-color: var(--mid-pink);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+  nav a {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 100;
+    text-decoration: none;
+  }
+  header nav #tarefas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 5.3125rem;
+    border-bottom: 5px solid var(--primary);
+    border-bottom-width: 5px;
+    line-height: 3.375rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  nav div a.logout {
+    font-size: 0.8rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    width: 9.375rem;
+    height: 35px;
+    background-color: var(--strong-pink);
+    border-style: none;
+    border-radius: 100px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  /* for the main class 'app' */
+  section.greeting h2.title {
+    color: var(--brown);
+    font-weight: 400;
+    font-size: 30px;
+  }
+  #user-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    height: 110px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+  }
+  .greeting {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 11rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  input#name::-webkit-input-placeholder {
+    font-family: "frankfurter_stdregular";
+    color: var(--light-pink);
+    font-size: 1.8rem;
+    width: 11rem;
+    background-color: transparent;
+  }
+  input#name::-moz-placeholder {
+    font-family: "frankfurter_stdregular";
+    color: var(--light-pink);
+    font-size: 1.8rem;
+    width: 11rem;
+    background-color: transparent;
+  }
+  input#name:-ms-input-placeholder {
+    font-family: "frankfurter_stdregular";
+    color: var(--light-pink);
+    font-size: 1.8rem;
+    width: 11rem;
+    background-color: transparent;
+  }
+  input#name::-ms-input-placeholder {
+    font-family: "frankfurter_stdregular";
+    color: var(--light-pink);
+    font-size: 1.8rem;
+    width: 11rem;
+    background-color: transparent;
+  }
+  input#name, input#name::placeholder {
+    font-family: "frankfurter_stdregular";
+    color: var(--light-pink);
+    font-size: 1.8rem;
+    width: 11rem;
+    background-color: transparent;
+  }
+  /*h1 e contagem de tarefas*/
+  h1 {
+    margin: 0.825rem 0;
+    font-family: "Frankfurter Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    color: var(--light-pink);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    padding: 1rem 0 0.7rem 1.2rem;
+  }
+  ul.stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 1rem 0 2.5rem 0;
+  }
+  ul.stats li span {
+    width: auto;
+    height: 30px;
+    background-color: var(--light-pink);
+    font-size: 0.75rem;
+    padding: 7px;
+    border-radius: var(--border-radius-one);
+    padding: 7px 0px 7px 7px;
+    color: var(--brown);
+  }
+  ul.stats li span#remaining-tasks {
+    width: auto;
+    height: 30px;
+    background-color: var(--light-pink);
+    font-size: 0.75rem;
+    border-radius: var(--border-radius-two);
+    padding: 7px 10px 7px 5px;
+  }
+  ul.stats li span#completed-tasks {
+    width: auto;
+    height: 30px;
+    background-color: var(--light-pink);
+    font-size: 0.75rem;
+    border-radius: var(--border-radius-two);
+    padding: 7px 10px 7px 5px;
+    margin-left: -1px;
+  }
+  ul.stats li span#total-tasks {
+    background-color: var(--light-pink);
+    font-size: 0.75rem;
+    border-radius: var(--border-radius-two);
+    padding: 7px 10px 7px 4px;
+    margin-left: -1px;
+  }
+  /* form input */
+  #todo-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    width: 90%;
+    height: 50px;
+    background-color: var(--light-blue);
+    border-radius: 80px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    z-index: 10;
+    margin-bottom: 0.8rem;
+  }
+  #todo-form input {
+    border-style: none;
+    background-color: transparent;
+    border-bottom: solid 2px var(--brown);
+    width: 50vw;
+    outline: none;
+    color: var(--brown);
+  }
+  #todo-form input::-webkit-input-placeholder {
+    color: var(--brown);
+    font-size: 0.9rem;
+  }
+  #todo-form input::-moz-placeholder {
+    color: var(--brown);
+    font-size: 0.9rem;
+  }
+  #todo-form input:-ms-input-placeholder {
+    color: var(--brown);
+    font-size: 0.9rem;
+  }
+  #todo-form input::-ms-input-placeholder {
+    color: var(--brown);
+    font-size: 0.9rem;
+  }
+  #todo-form input::placeholder {
+    color: var(--brown);
+    font-size: 0.9rem;
+  }
+  button.send-task {
+    background-color: transparent;
+    border-style: none;
+  }
+  /* lista de tarefas*/
+  .task-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--light-blue);
+    width: 78%;
+    height: 50px;
+    border-radius: 80px;
+    padding-left: 26px;
+    position: relative;
+    margin-left: calc(3.5rem - 1px);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .for-heart:first-child .heart-checkbox::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: calc(0.75em - 1px);
+    display: block;
+    height: 3em;
+    width: 2px;
+    background-color: var(--secondary);
+  }
+  ul.todos li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    height: 70px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: var(--light-blue);
+    border-radius: 56px;
+    margin-bottom: 2rem;
+  }
+  ul.todos li div span.id {
+    display: none;
+  }
+  ul.todos li div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    /* background-color: var(--light-blue); */
+    border-radius: 80px 0px 0 80px;
+  }
+  ul.todos li div span {
+    font-weight: 500;
+    color: var(--strong-brown);
+    font-size: 0.9rem;
+    padding-bottom: 2.5px;
+    width: 87%;
+    padding-left: 1.5rem;
+  }
+  ul.todos li div span {
+    font-weight: 500;
+    color: var(--strong-brown);
+    font-size: 0.9rem;
+    padding-bottom: 2.5px;
+  }
+  ul.todos li div span.creation-date {
+    font-weight: 500;
+    color: var(--strong-brown);
+    font-size: 0.9rem;
+    padding-left: 1.5rem;
+  }
+  div.task-list div.buttons {
+    display: inline-block;
+    width: 35%;
+    height: 50%;
+    position: relative;
+    bottom: 21%;
+    left: 7%;
+  }
+  ul.todos li button.edit-task {
+    background-color: transparent;
+    margin-right: calc(0.7rem - 1px);
+  }
+  ul.todos li button.edit-task:active {
+    background-color: transparent;
+    margin-right: calc(0.7rem - 1px);
+    opacity: 0.8;
+  }
+  ul.todos li button.edit-task:hover {
+    background-color: transparent;
+    margin-right: calc(0.7rem - 1px);
+    opacity: 0.6;
+  }
+  ul.todos li button.remove-task {
+    background-color: transparent;
+    margin-right: calc(1.5rem - 1px);
+  }
+  ul.todos li button.remove-task:hover {
+    background-color: transparent;
+    margin-right: calc(1.5rem - 1px);
+    opacity: 0.6;
+  }
+  ul.todos li button.remove-task:active {
+    background-color: transparent;
+    margin-right: calc(1.5rem - 1px);
+    opacity: 0.8;
+  }
+  /* completed tasks */
+  h2.completed-title {
+    width: 226px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--primary);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--greyish-purple);
+    height: 50px;
+    border-radius: 80px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 3rem 0 3rem 0;
+  }
+  ul.completed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  ul.completed li.completed-t div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--greyish-purple);
+    width: 90%;
+    height: 60px;
+    border-radius: 80px;
+    /* padding-left: 26px; */
+    position: relative;
+    /* margin-left: calc(3.5rem - 1px); */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: nowrap;
+    -ms-flex-line-pack: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-content: center;
+    justify-content: flex-start;
+  }
+  ul.completed li.completed-t div span.id {
+    display: none;
+  }
+  ul.completed li.completed-t {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    list-style-type: none;
+    margin-bottom: 2rem;
+  }
+  .c-heart {
+    position: absolute;
+    top: 28%;
+    left: 7%;
+  }
+  ul.completed li.completed-t div div.buttons-completed-tasks {
+    display: inline-block;
+    width: 35%;
+    height: 50%;
+    position: relative;
+    bottom: 71%;
+    left: 71%;
+    background-color: transparent;
+  }
+  ul.completed li.completed-t div div.buttons-completed-tasks button.remove-task {
+    background-color: transparent;
+    margin-left: calc(0.5rem - 1px);
+  }
+  ul.completed li.completed-t div div.buttons-completed-tasks button.redo-task {
+    background-color: transparent;
+    margin-left: calc(0.5rem - 1px);
+  }
+  ul.completed li.completed-t:last-child {
+    margin-bottom: 7rem;
+  }
+  ul.completed li.completed-t div span {
+    font-weight: 500;
+    color: var(--primary);
+    font-size: 0.9rem;
+    padding: 0.5rem 0 0rem 5rem;
+    width: 100%;
+  }
+  ul.completed li.completed-t div span.completion-date {
+    padding-bottom: 0.5rem;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    height: 98px;
+    background-color: var(--mid-pink);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}/*# sourceMappingURL=testando.css.map */

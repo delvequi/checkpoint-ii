@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script defer src="./scripts/login-script.js"></script>
+    <link rel="stylesheet" href="./styles/login-style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,300;1,400;1,500;1,800&display=swap');
+    </style>
+</head>
+<body class=login>
+   
+    <div id="container">
+       
+        <div id="containerform">
+           
+            <img src="./assets/svgexport-84.svg" id="loginIcon" alt="icon login">
+           
+            <h2 id="logintext">Login</h2>
+           
+            <img src="./assets/kv-logo.png" id="mainImg" alt="mainImg">
+            
+            <form action="./teste.html" class="loginForm" method="POST">
+                <div class="input-group">
+                    <label for="email" class="label">Email</label>
+                    <br>
+                    <input required type="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" id="email" class="input" autocomplete="username" placeholder="Type your email">
+                    <span class="error"></span>
+                </div>
+                <div class="input-group">
+                    <label for="password" class="label">Password</label>
+                    
+                    <br>
+                    <input required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,15}$" type="password" id="password" class="password" autocomplete="current-password" placeholder="Type your password">
+                    <span class="error"></span>
+                </div>
+                <button id="loginButton" disabled type="submit">Login</button>
+                <div id="createAcc">
+                    <a href="./index.html" id="createAcc">Não possui conta? Crie agora mesmo</a>
+                </div> 
+            </form>
+  
+       </div>
+       
+
+    </div>
+</body>
+</html>

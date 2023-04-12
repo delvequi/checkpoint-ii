@@ -1,0 +1,464 @@
+@import url(global.css);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+@media (min-width: 360px) {
+  body {
+    /* display: flex; */
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--purple);
+  }
+  h2#title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--mid-pink);
+    margin: 2rem 0 2rem 0;
+    overflow-y: hidden;
+  }
+  #loginIcon {
+    position: relative;
+    top: 10px;
+    margin-top: 30px;
+    FONT-WEIGHT: 500;
+    width: 32px;
+    height: 32px;
+  }
+  #mainImg {
+    width: 202px;
+    height: auto;
+  }
+  #container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--lighter-blue);
+    width: 100vw;
+    /* height: 100vh; */
+    background-image: url(/assets/benefits-bg.png);
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-position: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  #containerform {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80vw;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .loginForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    height: 83vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  div.input-group span {
+    font-size: 0.8rem;
+    color: var(--pink-hot);
+    font-family: "Montserrat";
+    margin-top: 0.5rem;
+  }
+  div.input-group, div.input-group error {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80vw;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    height: 15%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-line-pack: distribute;
+    align-content: flex-start;
+  }
+  div.input-group input.err {
+    border: solid 1px var(--pink-hot);
+    background-color: var(--almost-white);
+  }
+  div.input-group input.success {
+    border: solid 1px var(--blueish);
+    background-color: #fff;
+    color: var(--pink);
+  }
+  input {
+    border: solid 1px var(--blueish);
+    width: 75.938vw;
+    height: 30px;
+    margin-top: 5px;
+    padding: 20px;
+    color: var(--dark-grey);
+    background-color: var(--primary);
+    border-radius: 2em;
+    line-height: 1.4;
+  }
+  input::-webkit-input-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input::-moz-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input:-ms-input-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input::-ms-input-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input::placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input.input-error {
+    border: 2px solid var(--pink-hot);
+    background-color: var(--almost-white);
+    caret-color: var(--dark-grey);
+    color: var(--dark-grey);
+  }
+  .error-message {
+    color: var(--pink-hot);
+    line-height: 1.8rem;
+    font-size: 0.8rem;
+  }
+  label {
+    color: var(--mid-blue);
+  }
+  #registerButton {
+    width: 41.563vw;
+    height: 40px;
+    background-color: var(--pink);
+    border: solid 1px var(--pink);
+    border-radius: 2em;
+    color: var(--primary);
+    margin-bottom: 2rem;
+  }
+  div#loginAcc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  div#loginAcc a {
+    font-size: 0.8rem;
+    color: var(--dark-grey);
+    margin-bottom: 0.5rem;
+  }
+}
+@media (min-width: 360px) and (min-width: 481px) {
+  #container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--lighter-blue);
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/assets/benefits-bg.png);
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-position: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  #containerform {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80vw;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    align-items: center;
+  }
+  h2#title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--mid-pink);
+    margin: 1rem 0 1rem 0;
+    overflow-y: hidden;
+  }
+  .loginForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 70vw;
+    height: 88vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  div.input-group, div.input-group error {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 56vw;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    height: 21%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    /* margin-bottom: 1rem; */
+    justify-content: center;
+    -ms-flex-line-pack: distribute;
+    align-content: center;
+  }
+  label {
+    color: var(--mid-blue);
+    /* margin-top: 10px; */
+  }
+  input {
+    width: 55.52vw;
+  }
+  #registerButton {
+    width: 20.651vw;
+    height: 6vh;
+    margin: 0.6rem;
+  }
+  div#loginAcc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: flex-start;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    align-items: center;
+  }
+  div#loginAcc a {
+    font-size: 0.8rem;
+    color: var(--dark-grey);
+    margin: 1rem 0 0.5rem 0;
+    height: 50px;
+  }
+  #mainImg {
+    width: auto;
+    height: 93px;
+  }
+  div.input-group, div.input-group error {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80vw;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    height: 15%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-line-pack: distribute;
+    align-content: center;
+  }
+}
+@media (min-width: 360px) and (min-width: 481px) and (min-width: 769px) {
+  input {
+    border: solid 1px var(--blueish);
+    width: 39.599vw;
+    height: 30px;
+    margin-top: 5px;
+    padding: 20px;
+    color: var(--dark-grey);
+    background-color: var(--primary);
+    border-radius: 2em;
+    line-height: 1.4;
+  }
+  input::-webkit-input-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input::-moz-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input:-ms-input-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input::-ms-input-placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input::placeholder {
+    color: var(--blueish);
+    font-weight: 500;
+  }
+  input.input-error {
+    border: 2px solid var(--pink-hot);
+    background-color: var(--almost-white);
+    caret-color: var(--dark-grey);
+    color: var(--dark-grey);
+  }
+  .error-message {
+    color: var(--pink-hot);
+    line-height: 1.8rem;
+    font-size: 0.8rem;
+  }
+  #registerButton {
+    width: 17.295vw;
+    height: 40px;
+    background-color: var(--pink);
+    border: solid 1px var(--pink);
+    border-radius: 2em;
+    color: var(--primary);
+  }
+  #container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--lighter-blue);
+    width: 100vw;
+    /* height: 100vh; */
+    background-image: url(/assets/benefits-bg.png);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (min-width: 360px) and (min-width: 481px) and (min-width: 1025px) {
+  input {
+    width: 31.707vw;
+  }
+  #registerButton {
+    width: 12.976vw;
+    height: 40px;
+    background-color: var(--pink);
+    border: solid 1px var(--pink);
+    border-radius: 2em;
+    color: var(--primary);
+  }
+}
+@media (min-width: 360px) and (min-width: 481px) and (min-width: 1201px) {
+  #loginButton {
+    width: 11.074vw;
+  }
+  input {
+    width: 27.233vw;
+  }
+}/*# sourceMappingURL=signUp-style-teste.css.map */
